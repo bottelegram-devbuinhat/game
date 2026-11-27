@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54061a253b9c5180eecc09f07876cb4c, type: 3}
+  m_Name: MIS_05_showdown
+  m_EditorClassIdentifier: 
+  missionId: "mis_05_showdown"
+  title: "Showdown"
+  objectives:
+  - "Survive the ambush"
+  - "Take out the last wave"
+  rewardsMoney: 2500
+  rewardsReputation: 60
+  startTrigger: "trigger_showdown"
+  completionConditions:
+  - "ambush_survived"
+  - "final_wave_cleared"
+  dialogueLines:
+  - "Tới giờ thanh toán rồi."
+  - "Đừng nói nhiều, nó không nghe đâu."
+  - "Xong vụ này mày không còn là thằng giao hàng nữa."
+  timeLimitSeconds: 300
+  failAtWantedLevel: 3
+  retryable: 1
+  timeBonusPerSecond: 1.6667

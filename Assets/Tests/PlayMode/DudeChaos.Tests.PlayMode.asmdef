@@ -1,0 +1,22 @@
+{
+  "name": "DudeChaos.Tests.PlayMode",
+  "rootNamespace": "DudeChaos.Tests.PlayMode",
+  "references": [
+    "DudeChaos.Data",
+    "DudeChaos.Player",
+    "DudeChaos.Combat",
+    "UnityEngine.TestRunner"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

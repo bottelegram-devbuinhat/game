@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54061a253b9c5180eecc09f07876cb4c, type: 3}
+  m_Name: MIS_10_slum_deal
+  m_EditorClassIdentifier: 
+  missionId: "mis_10_slum_deal"
+  title: "Slum Deal"
+  objectives:
+  - "Find the contact in the slums"
+  - "Survive the ambush"
+  - "Get the package out"
+  rewardsMoney: 8500
+  rewardsReputation: 120
+  startTrigger: "trigger_slum_deal"
+  completionConditions:
+  - "contact_met"
+  - "ambush_survived"
+  - "package_secured"
+  dialogueLines:
+  - "Gặp người ở khu ổ chuột. Mang theo tiền."
+  - "Nó phục kích mày đấy. Chuẩn bị đi."
+  - "Không ai phản bội tao hai lần."
+  timeLimitSeconds: 360
+  failAtWantedLevel: 4
+  retryable: 1
+  timeBonusPerSecond: 4.7222

@@ -1,0 +1,20 @@
+{
+  "name": "DudeChaos.Progression",
+  "rootNamespace": "DudeChaos.Progression",
+  "references": [
+    "DudeChaos.Data",
+    "DudeChaos.Core",
+    "DudeChaos.Player",
+    "DudeChaos.Combat",
+    "DudeChaos.Wanted"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

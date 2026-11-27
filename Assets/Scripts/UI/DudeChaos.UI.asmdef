@@ -1,0 +1,28 @@
+{
+  "name": "DudeChaos.UI",
+  "rootNamespace": "DudeChaos.UI",
+  "references": [
+    "DudeChaos.Data",
+    "DudeChaos.Core",
+    "DudeChaos.Player",
+    "DudeChaos.Player.Input",
+    "DudeChaos.Combat",
+    "DudeChaos.Wanted",
+    "DudeChaos.Settings",
+    "DudeChaos.Save",
+    "DudeChaos.Progression",
+    "DudeChaos.City",
+    "DudeChaos.Vehicles",
+    "UnityEngine.UI",
+    "Unity.TextMeshPro"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

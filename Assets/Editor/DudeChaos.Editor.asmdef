@@ -1,0 +1,32 @@
+{
+  "name": "DudeChaos.Editor",
+  "rootNamespace": "DudeChaos.EditorTools",
+  "references": [
+    "DudeChaos.Data",
+    "DudeChaos.Player",
+    "DudeChaos.Player.Input",
+    "DudeChaos.CameraRig",
+    "DudeChaos.Npc",
+    "DudeChaos.Combat",
+    "DudeChaos.Vehicles",
+    "DudeChaos.UI",
+    "DudeChaos.Settings",
+    "Unity.Cinemachine",
+    "Unity.TextMeshPro",
+    "UnityEngine.UI",
+    "Unity.InputSystem",
+    "Unity.RenderPipelines.Core.Runtime",
+    "Unity.RenderPipelines.Universal.Runtime"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

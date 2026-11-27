@@ -1,0 +1,8 @@
+namespace DudeChaos.Data
+{
+    public interface IDamageable
+    {
+        bool IsAlive { get; }
+        void ApplyDamage(DamageInfo info);
+    }
+}

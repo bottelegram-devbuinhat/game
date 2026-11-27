@@ -1,0 +1,19 @@
+{
+  "name": "DudeChaos.Npc",
+  "rootNamespace": "DudeChaos.Npc",
+  "references": [
+    "DudeChaos.Data",
+    "DudeChaos.Core",
+    "DudeChaos.World",
+    "DudeChaos.City"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

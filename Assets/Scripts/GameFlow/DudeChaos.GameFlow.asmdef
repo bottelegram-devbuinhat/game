@@ -1,0 +1,24 @@
+{
+  "name": "DudeChaos.GameFlow",
+  "rootNamespace": "DudeChaos.GameFlow",
+  "references": [
+    "DudeChaos.Data",
+    "DudeChaos.Core",
+    "DudeChaos.Player",
+    "DudeChaos.Save",
+    "DudeChaos.Wanted",
+    "DudeChaos.Progression",
+    "DudeChaos.UI",
+    "DudeChaos.Combat",
+    "DudeChaos.City"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

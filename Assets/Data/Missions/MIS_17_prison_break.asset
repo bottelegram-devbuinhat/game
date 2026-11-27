@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54061a253b9c5180eecc09f07876cb4c, type: 3}
+  m_Name: MIS_17_prison_break
+  m_EditorClassIdentifier: 
+  missionId: "mis_17_prison_break"
+  title: "Prison Break"
+  objectives:
+  - "Tail the transport van"
+  - "Free the contact"
+  - "Lose the pursuit"
+  rewardsMoney: 18000
+  rewardsReputation: 60
+  startTrigger: "trigger_prison_break"
+  completionConditions:
+  - "van_tailed"
+  - "contact_freed"
+  - "pursuit_lost"
+  dialogueLines:
+  - "Đừng hỏi tại sao nó ở trong đó. Đưa nó ra."
+  - "Cắt hàng rào, đừng cắt dây điện."
+  - "Mất dấu xe là mất luôn người."
+  timeLimitSeconds: 420
+  failAtWantedLevel: 4
+  retryable: 1
+  timeBonusPerSecond: 8.5714

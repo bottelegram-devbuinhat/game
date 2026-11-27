@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54061a253b9c5180eecc09f07876cb4c, type: 3}
+  m_Name: MIS_06_chop_shop
+  m_EditorClassIdentifier: 
+  missionId: "mis_06_chop_shop"
+  title: "Chop Shop"
+  objectives:
+  - "Steal the marked car and deliver it to the chop shop"
+  - "Lose the cops"
+  rewardsMoney: 3800
+  rewardsReputation: 55
+  startTrigger: "trigger_chop_shop"
+  completionConditions:
+  - "car_delivered"
+  - "not_wanted"
+  dialogueLines:
+  - "Cái xe đó đáng giá hơn khi tháo ra."
+  - "Chạy tới xưởng trước khi cảnh sát tới."
+  - "Tiền đây. Đừng tiêu hết trong một đêm."
+  timeLimitSeconds: 300
+  failAtWantedLevel: 3
+  retryable: 1
+  timeBonusPerSecond: 2.5333

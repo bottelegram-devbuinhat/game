@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4acc7296839eefdf932c559f62b55ad6, type: 3}
+  m_Name: VEH_Street_Bike
+  m_EditorClassIdentifier: 
+  vehicleId: "veh_street_bike"
+  vehicleName: "Street Bike"
+  handlingProfile: 3
+  armourClass: 0
+  maxHealth: 450
+  seats: 2
+  centerOfMassOffset: {x: 0, y: -0.25, z: 0}
+  maxSpeed: 42
+  acceleration: 20
+  brakeForce: 30
+  steerAngle: 26
+  enterClip: {fileID: 0}
+  exitClip: {fileID: 0}
+  engineSound: {fileID: 0}
+  hornSound: {fileID: 0}

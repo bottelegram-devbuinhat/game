@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54061a253b9c5180eecc09f07876cb4c, type: 3}
+  m_Name: MIS_18_army_depot
+  m_EditorClassIdentifier: 
+  missionId: "mis_18_army_depot"
+  title: "Army Depot"
+  objectives:
+  - "Cut the fence"
+  - "Load the crates"
+  - "Drive out before the alarm"
+  rewardsMoney: 20000
+  rewardsReputation: 65
+  startTrigger: "trigger_army_depot"
+  completionConditions:
+  - "fence_cut"
+  - "crates_loaded"
+  - "alarm_beaten"
+  dialogueLines:
+  - "Kho đó có thứ không mua được ở đâu."
+  - "Chất thùng lên, đừng mở."
+  - "Ra trước khi chuông kêu."
+  timeLimitSeconds: 420
+  failAtWantedLevel: 4
+  retryable: 1
+  timeBonusPerSecond: 9.5238

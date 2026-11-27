@@ -1,0 +1,19 @@
+{
+  "name": "DudeChaos.Vehicles",
+  "rootNamespace": "DudeChaos.Vehicles",
+  "references": [
+    "DudeChaos.Data",
+    "DudeChaos.Core",
+    "DudeChaos.Player",
+    "DudeChaos.Combat"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15368c9c026dd66fff590e5d5a59153c, type: 3}
+  m_Name: CombatSettings
+  m_EditorClassIdentifier: 
+  lightMeleeForce: 1200
+  lightHitStop: 0.04
+  heavyMeleeForce: 3800
+  heavyHitStop: 0.11
+  ragdolledDamageMultiplier: 1.6
+  backstabMultiplier: 1.8
+  backstabDotThreshold: -0.35
+  muzzleLightDuration: 0.055
+  recoilRecoveryTime: 0.18
+  pointBlankDistance: 2.5
+  baseShotImpulse: 45
+  shotUpwardBias: 0.25
+  explosionRadius: 6
+  explosionImpulse: 260
+  explosionDamage: 140
+  explosionBufferSize: 64

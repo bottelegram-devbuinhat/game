@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54061a253b9c5180eecc09f07876cb4c, type: 3}
+  m_Name: MIS_15_showroom_hit
+  m_EditorClassIdentifier: 
+  missionId: "mis_15_showroom_hit"
+  title: "Showroom Hit"
+  objectives:
+  - "Walk into the showroom"
+  - "Take the keys"
+  - "Drive through the window"
+  rewardsMoney: 14500
+  rewardsReputation: 170
+  startTrigger: "trigger_showroom_hit"
+  completionConditions:
+  - "showroom_entered"
+  - "keys_taken"
+  - "window_crashed"
+  dialogueLines:
+  - "Bảo hiểm là cho người xin phép."
+  - "Lấy chìa, đừng lấy xe trưng bày."
+  - "Đạp ga qua cửa kính. Đừng nhìn lại."
+  timeLimitSeconds: 360
+  failAtWantedLevel: 4
+  retryable: 1
+  timeBonusPerSecond: 8.0556

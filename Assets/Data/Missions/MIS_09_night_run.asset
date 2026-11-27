@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54061a253b9c5180eecc09f07876cb4c, type: 3}
+  m_Name: MIS_09_night_run
+  m_EditorClassIdentifier: 
+  missionId: "mis_09_night_run"
+  title: "Night Run"
+  objectives:
+  - "Wait for nightfall"
+  - "Load the cargo at the port"
+  - "Deliver it before sunrise"
+  rewardsMoney: 7500
+  rewardsReputation: 110
+  startTrigger: "trigger_night_run"
+  completionConditions:
+  - "night_fallen"
+  - "cargo_loaded"
+  - "cargo_delivered"
+  dialogueLines:
+  - "Cảng chỉ mở ban đêm. Buồn cười thật."
+  - "Chất hàng lên, đừng hỏi hàng gì."
+  - "Về trước khi trời sáng."
+  timeLimitSeconds: 420
+  failAtWantedLevel: 4
+  retryable: 1
+  timeBonusPerSecond: 3.5714

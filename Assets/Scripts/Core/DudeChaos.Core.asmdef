@@ -1,0 +1,16 @@
+{
+  "name": "DudeChaos.Core",
+  "rootNamespace": "DudeChaos.Core",
+  "references": [
+    "DudeChaos.Data"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

@@ -1,0 +1,20 @@
+{
+  "name": "DudeChaos.City",
+  "rootNamespace": "DudeChaos.City",
+  "references": [
+    "DudeChaos.Data",
+    "DudeChaos.Core",
+    "DudeChaos.Player",
+    "DudeChaos.Progression",
+    "DudeChaos.Wanted"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
