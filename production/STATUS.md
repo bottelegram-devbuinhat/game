@@ -18,7 +18,7 @@
 | `python3 Tools/audit/balance.py` | **PASS** | **0 findings** (all 48 weapons valid class/mag/range & non-excluded DPS in `55..620`; all 18 vehicles `brake > accel` & within speed bands; all 25 shop & 59 equipment items affordable within `$319,033` / Lvl 19) |
 | `python3 Tools/audit/reference.py` | **PASS** | **0 findings** (strict ballistic muzzle-energy ordering per family, Semi Sniper 2 hits < Revolver .44 3 hits, 20 missions = `$200,650` base / `$319,033` 3-star / `1,815` rep -> Lvl 19, 12 districts = `2.29 km²`) |
 | `python3 Tools/verify/checklist.py summary` | **PASS** | 59 verification items tracked (`56 TODO`, `0 PASS`, `0 FAIL`, `3 BLOCKED`) |
-| `Tools/art/*` (`build_prompts.py`, `review_images.py`, `process_step_renders.py`, `key_alpha.py`, `optimize_textures.py`, `make_props.py`) | **PASS** | **`185/185` prompts** (`31+72+30+10+42`) extracted into `production/IMAGE_MANIFEST_185.json` (`0` warnings); **`buoc_01.zip` (`31/31 KEEP, 0 REDO`)** sealed; **`renders/buoc_02/` (`17/72 KEEP, 0 REDO`)** verified (`55` remaining queued for next `gemini-3.1-flash-image` window) |
+| `Tools/art/*` (`build_prompts.py`, `review_images.py`, `process_step_renders.py`, `key_alpha.py`, `optimize_textures.py`, `make_props.py`) | **PASS** | **`185/185` prompts** (`31+72+30+10+42`) extracted into `production/IMAGE_MANIFEST_185.json` (`0` warnings); **`buoc_01.zip` (`31/31 KEEP, 0 REDO`)** sealed; **`renders/buoc_02/` (`22/72 KEEP, 0 REDO`)** verified (`50` remaining queued for next `gemini-3.1-flash-image` window) |
 | `ProjectSettings/*.asset` | **PASS** | All 9 Unity manager YAML files + `ProjectVersion.txt` (`6000.3.28f1`) committed with `Mobile_URP` and built scene GUIDs wired |
 
 ### B. Proven in Unity Editor
