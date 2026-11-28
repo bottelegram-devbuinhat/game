@@ -82,7 +82,8 @@ Engine target: **Unity 6.3 LTS (`6000.3.28f1`)** · Pipeline: **URP (`17.3.0`)**
 - **BLOCKED**: Compiling `FusionNetworkTransport` against Photon Fusion SDK (`V-1002`).
 
 ### P11 — Hardening, Art Pipeline, Release
-- **Added**: `Tools/art/` (`setup_tools.sh`, `make_props.py`, `optimize_art.sh`, `optimize_textures.py`, `build_prompts.py`, `review_images.py`, `process_step_renders.py`, `key_alpha.py`), `production/IMAGE_MANIFEST_185.json` (`185` items), `BuildScript.cs` (env-var keystore gate), `Tools/verify/checklist.py`, `production/VERIFY_BACKLOG.md`, `production/RELEASE_CHECKLIST.md`, `design/ART_BIBLE.md`, **`buoc_01.zip` (`31/31` verified `.webp` assets)**, plus **Step 2 renders `122`..`165` (`22/72` verified `.webp` assets in `renders/buoc_02/`)**.
-- **Proven**: `buoc_01: 31/31 ảnh, 0 lỗi` sealed in `buoc_01.zip` & verified via `review_images.py`; `buoc_02: 22/72` verified via `review_images.py --allow-partial`.
-- **BLOCKED**: Android APK build & mid-tier phone profiling (`V-1101`, `V-1102`); remaining `50/72` Step 2 renders (`166`..`750`) + Steps 3–5 paused at `gemini-3.1-flash-image` weekly quota (`retry after ~120h`).
+- **Added**: `Tools/art/` (`setup_tools.sh`, `make_props.py`, `optimize_art.sh`, `optimize_textures.py`, `build_prompts.py`, `review_images.py`, `process_step_renders.py`, `key_alpha.py`), `production/IMAGE_MANIFEST_185.json` (`185` items), `BuildScript.cs` (env-var keystore gate), `Tools/verify/checklist.py`, `production/VERIFY_BACKLOG.md`, `production/RELEASE_CHECKLIST.md`, `design/ART_BIBLE.md`, **`buoc_01.zip` (`31/31` verified `.webp` assets)**, plus **Step 2 renders `122`..`167` & `193` (`25/72` verified `.webp` assets in `renders/buoc_02/`)**.
+- **Proven**: `buoc_01: 31/31 ảnh, 0 lỗi` sealed in `buoc_01.zip` & verified via `review_images.py`; `buoc_02: 25/72` verified via `review_images.py --allow-partial`.
+- **BLOCKED**: Android APK build & mid-tier phone profiling (`V-1101`, `V-1102`); remaining `47/72` Step 2 renders (`176`..`750`) + Steps 3–5 paused at `gemini-3.1-flash-image` quota (`retry after ~97h12m`).
+
 
