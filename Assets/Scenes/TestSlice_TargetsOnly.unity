@@ -500,7 +500,7 @@ Transform:
   m_GameObject: {fileID: 800}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 8}
+  m_LocalPosition: {x: -4, y: 1, z: 8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -519,6 +519,80 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad4f94ff7c352233346cb00c4696893, type: 3}
   bodyPart: 0
   damageTarget: {fileID: 802}
+--- !u!1 &810
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 811}
+  - component: {fileID: 812}
+  - component: {fileID: 813}
+  m_Layer: 0
+  m_Name: DamageDummy_1 // ART REPLACE
+  m_TagString: Untagged
+  m_IsActive: 1
+--- !u!4 &811
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 810}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.5, y: 1, z: 8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 810}
+  m_Enabled: 1
+  m_Script: {fileID: 11500000, guid: b32a5116f5be3d3c1ad033225a7077d9, type: 3}
+  maxHealth: 200
+--- !u!114 &813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 810}
+  m_Enabled: 1
+  m_Script: {fileID: 11500000, guid: 6ad4f94ff7c352233346cb00c4696893, type: 3}
+  bodyPart: 0
+  damageTarget: {fileID: 812}
+--- !u!1 &820
+GameObject:
+  m_ObjectHideFlags: 0
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 821}
+  - component: {fileID: 822}
+  - component: {fileID: 823}
+  m_Layer: 0
+  m_Name: DamageDummy_2 // ART REPLACE
+  m_TagString: Untagged
+  m_IsActive: 1
+--- !u!4 &821
+Transform:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 820}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 1, z: 8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 820}
+  m_Enabled: 1
+  m_Script: {fileID: 11500000, guid: b32a5116f5be3d3c1ad033225a7077d9, type: 3}
+  maxHealth: 200
+--- !u!114 &823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_GameObject: {fileID: 820}
+  m_Enabled: 1
+  m_Script: {fileID: 11500000, guid: 6ad4f94ff7c352233346cb00c4696893, type: 3}
+  bodyPart: 0
+  damageTarget: {fileID: 822}
 --- !u!1 &600
 GameObject:
   m_ObjectHideFlags: 0

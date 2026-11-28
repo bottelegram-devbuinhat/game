@@ -11,4 +11,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestSlice.unity
     guid: d4543b83fa57245ee6c0efb786ac3384
+  - enabled: 1
+    path: Assets/Scenes/TestSlice_CarOnly.unity
+    guid: f732b387c3b5f06b81e458c9973064e3
+  - enabled: 1
+    path: Assets/Scenes/TestSlice_TargetsOnly.unity
+    guid: e53a5c1e83db8e93674432ff5f14e1f2
+  - enabled: 1
+    path: Assets/Scenes/TestSlice_WeaponOnly.unity
+    guid: 48d63f4083138da187126b33cf300a43
   m_configObjects: {}
+

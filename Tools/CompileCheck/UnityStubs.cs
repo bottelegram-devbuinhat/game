@@ -662,6 +662,8 @@ namespace UnityEngine
     {
         public string name { get; set; } = string.Empty;
         private bool _destroyed;
+        public int GetInstanceID() => System.Runtime.CompilerServices.RuntimeHelpers.GetHashCode(this);
+
 
         public static T Instantiate<T>(T original) where T : Object
         {
@@ -907,6 +909,18 @@ namespace UnityEngine
 
         public void SetActive(bool value) => _activeSelf = value;
         public static GameObject Find(string name) => null;
+        public static GameObject CreatePrimitive(PrimitiveType type)
+        {
+            GameObject go = new GameObject(type.ToString());
+            if (type == PrimitiveType.Capsule)
+                go.AddComponent<CapsuleCollider>();
+            else if (type == PrimitiveType.Sphere)
+                go.AddComponent<SphereCollider>();
+            else
+                go.AddComponent<BoxCollider>();
+            return go;
+        }
+
 
         public T AddComponent<T>() where T : Component, new()
         {
@@ -1180,6 +1194,7 @@ namespace UnityEngine
 
     public static class Physics
     {
+        public static bool autoSyncTransforms { get; set; }
         public static readonly List<Collider> RegisteredColliders = new List<Collider>();
 
         public static bool Raycast(
@@ -1425,6 +1440,16 @@ namespace UnityEngine
         public static UnityEngine.Rendering.AmbientMode ambientMode { get; set; } = UnityEngine.Rendering.AmbientMode.Flat;
     }
 
+    public enum PrimitiveType
+    {
+        Sphere = 0,
+        Capsule = 1,
+        Cylinder = 2,
+        Cube = 3,
+        Plane = 4,
+        Quad = 5
+    }
+
     public enum ShadowQuality
     {
         Disable = 0,
@@ -1434,16 +1459,21 @@ namespace UnityEngine
 
     public static class QualitySettings
     {
+        private static int _qualityLevel = 5;
+        public static string[] names { get; set; } = new[] { "Very Low", "Low", "Medium", "High", "Very High", "Ultra" };
         public static ShadowQuality shadows { get; set; } = ShadowQuality.All;
         public static float shadowDistance { get; set; } = 50f;
         public static float lodBias { get; set; } = 1f;
         public static int antiAliasing { get; set; } = 1;
         public static int vSyncCount { get; set; } = 0;
         public static UnityEngine.Rendering.RenderPipelineAsset renderPipeline { get; set; }
+        public static int GetQualityLevel() => _qualityLevel;
+        public static void SetQualityLevel(int index, bool applyExpensiveChanges = true) => _qualityLevel = index;
     }
 
     public static class Application
     {
+        public static string unityVersion { get; set; } = "6000.3.28f1";
         public static int targetFrameRate { get; set; } = 60;
         public static bool isPlaying { get; set; } = true;
         public static void Quit() { }

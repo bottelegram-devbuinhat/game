@@ -1,0 +1,1 @@
+../06_PROMPT_buoc5_chi_tiet_noi_that.md

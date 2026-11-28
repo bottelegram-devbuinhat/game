@@ -540,6 +540,67 @@ def main() -> int:
             findings,
         )
 
+    # 9. Audit all *.unity scene files under Assets/Scenes/ (vectors, MonoBehaviour m_Script GUIDs & field names)
+    vec_re = re.compile(
+        r"\{\s*x:\s*([^,}]+),\s*y:\s*([^,}]+)(?:,\s*z:\s*([^,}]+))?(?:,\s*w:\s*([^,}]+))?\s*\}"
+    )
+    for sf in sorted(assets_dir.rglob("*.unity")):
+        rel_posix = sf.relative_to(REPO_ROOT).as_posix()
+        stext = sf.read_text(encoding="utf-8", errors="replace")
+        for lineno, line in enumerate(stext.splitlines(), start=1):
+            for vm in vec_re.finditer(line):
+                comps = [c for c in vm.groups() if c is not None]
+                if not all(is_finite_number(c) for c in comps):
+                    findings.append(f"SCENE_VECTOR: {rel_posix}:{lineno}: non-numeric vector {vm.group(0)}")
+
+        # Split scene YAML by '--- !u!' documents and validate every MonoBehaviour (!u!114)
+        for doc in stext.split("--- !u!"):
+            if not doc.startswith("114 "):
+                continue
+            sm = re.search(
+                r"^\s*m_Script:\s*\{[^}]*\bguid:\s*([0-9a-fA-F]{32})\b[^}]*\}",
+                doc,
+                re.MULTILINE,
+            )
+            if not sm:
+                findings.append(f"SCENE_SCRIPT_GUID: {rel_posix}: MonoBehaviour missing m_Script guid")
+                continue
+            sguid = sm.group(1).lower()
+            cs_target = guid_to_cs.get(sguid) or det_guid_to_cs.get(sguid)
+            if cs_target is None:
+                if not has_package_cache and sguid in PACKAGE_SCRIPT_WHITELIST:
+                    continue
+                findings.append(f"SCENE_SCRIPT_GUID: {rel_posix}: m_Script guid {sguid} resolves to no .cs.meta")
+                continue
+            allowed = cs_class_fields.get(cs_target, set())
+            for dline in doc.splitlines():
+                fm = re.match(r"^  ([A-Za-z_][A-Za-z0-9_]*):", dline)
+                if fm:
+                    fname = fm.group(1)
+                    if fname in MONOBEHAVIOUR_HEADER_KEYS:
+                        continue
+                    if fname not in allowed:
+                        findings.append(
+                            f"SCENE_FIELD_MISMATCH: {rel_posix}: field '{fname}' not found on {cs_target.stem}"
+                        )
+
+    # 10. Verify ProjectSettings/EditorBuildSettings.asset scene paths & GUIDs
+    ebs_path = REPO_ROOT / "ProjectSettings" / "EditorBuildSettings.asset"
+    if ebs_path.is_file():
+        ebs_text = ebs_path.read_text(encoding="utf-8", errors="replace")
+        for m in re.finditer(r"path:\s*(Assets/[^\s]+)\s*\n\s*guid:\s*([0-9a-fA-F]{32})", ebs_text):
+            spath, sguid = m.group(1), m.group(2).lower()
+            sfile = REPO_ROOT / spath
+            smeta = Path(f"{sfile}.meta")
+            if not sfile.is_file():
+                findings.append(f"BUILD_SETTINGS_SCENE: missing scene file {spath}")
+            elif smeta.is_file():
+                actual_guid = parse_meta_guid(smeta)
+                if actual_guid != sguid:
+                    findings.append(
+                        f"BUILD_SETTINGS_SCENE: {spath} guid {sguid} != meta guid {actual_guid}"
+                    )
+
     for f in findings:
         print(f"FINDING: {f}")
 
